@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body {
+            background-image: url("background1.jpg");
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }
+        h1 {
+            color: white;
+            text-align: center;
+            -webkit-text-stroke: 1px black;
+            margin-top: 3%;
+        }
+        .cont {
+            margin-top: 5%;
+            display: flex;
+            justify-content: center;
+            color: white;
+            /* border: 2px solid black; */
+
+        }
+        input{
+            border-radius: 4px;
+            border: 0;
+            background-color: rgba(255,255,255,0.5);
+        }
+        #submit-container{
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            margin:8px 0 5px 0;
+        }
+        a{
+            text-align: center;
+            width: 100%;
+            /* border: 2px solid black; */
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Welcome</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Welcome</h1>
+    </div>
+    <div class="cont">
+        <form method="POST" action="/login">
+            Username:<br>
+            <input required type="text" name="username">
+            <br>
+            Password:<br>
+            <input required type="password" name="password">
+            <br>
+            <% if(WrongInfo){ %>
+                <div  class="alert alert-danger" role="alert"
+                style="margin-top: 2%;">
+                    Wrong username or password
+                  </div>
+                  <% } %>
+            <div id="submit-container">
+            <input type="submit" value="Login"">
+            </div>
+            <a href="registration">I dont have an account</a>
+        </form>
+       
+    </div>
+</body>
+</html>
