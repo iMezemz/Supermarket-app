@@ -43,6 +43,10 @@
     </nav>
 
     <% if(resultArray.length != 0) { %>
+        <script>
+            var res;
+            var goto;
+        </script>
        
             <% for(var i = 0; i<resultArray.length ; i++) { %>
                
@@ -57,8 +61,8 @@
                 </button>
             </form>
             <script>
-                let res = '<%=resultArray[i].itemName%>';
-                let goto = res.split(" ")[0].toLowerCase();
+                 res = '<%=resultArray[i].itemName%>';
+                 goto = res.split(" ")[0].toLowerCase();
                 if(goto == "the"){
                     goto = "sun";
                 }
@@ -70,9 +74,5 @@
         <h1>No matching items</h1>
         <% } %>
 </body>
-<script>
-    for(var result of resultArray){
 
-    }
-</script>
 </html>

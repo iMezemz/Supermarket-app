@@ -64,6 +64,12 @@
                     Wrong username or password
                   </div>
                   <% } %>
+            <% if(RegSuccess){ %>
+                <div  class="alert alert-success" role="alert"
+                style="margin-top: 2%;">
+                    Registration successful
+                  </div>
+                  <% } %>
             <div id="submit-container">
             <input type="submit" value="Login"">
             </div>
